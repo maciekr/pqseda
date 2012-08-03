@@ -130,7 +130,7 @@ public class PermqueueConsumer extends ServiceSupport implements Consumer {
 			PermqueuePayload polledPayload = null;
 
 			try {
-				StopWatch pollStopWatch = new Slf4JStopWatch("permqueue.POLL.call");
+				StopWatch pollStopWatch = new Slf4JStopWatch("pqseda.POLL.call");
 				pollStopWatch.start();
 				polledPayload = queue.<PermqueuePayload> poll();
 				pollStopWatch.stop();
@@ -147,8 +147,8 @@ public class PermqueueConsumer extends ServiceSupport implements Consumer {
 						newExchange.setFromEndpoint(endpoint);
 
 						LOGGER.debug("About to process an exchange from endpoint: {}. \nExchange (cloned): {}",
-										endpoint.getEndpointUri(),
-										newExchange.toString());
+                                endpoint.getEndpointUri(),
+                                newExchange.toString());
 
 						processor.process(newExchange);
 					} catch (Throwable e) {

@@ -11,7 +11,7 @@ import java.util.Map;
 
 
 /**
- * Seda-like component over permqueue: https://github.com/maciekr/permqueue
+ * Seda-like component over permqueue: https://github.com/maciekr/pqseda
  *
  */
 public class PermqueueComponent extends DefaultComponent {

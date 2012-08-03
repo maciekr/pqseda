@@ -13,7 +13,7 @@ import java.util.LinkedList;
 public class PermqueueComponentTest extends CamelTestSupport {
 
 	private static final int PAUSE_TIMEOUT = 5000;
-	private static final String PERM_QUEUE_TEST_QUEUE_URI = "permqueue:testQueue?parallelExchanges=5";
+	private static final String PERM_QUEUE_TEST_QUEUE_URI = "pqseda:testQueue?parallelExchanges=5";
 	private static final String MOCK_DESTINATION_URI = "mock:destination";
 	private static final String PAUSING_MESSAGE_BODY = "pause";
 

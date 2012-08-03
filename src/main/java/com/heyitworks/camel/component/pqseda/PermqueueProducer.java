@@ -29,7 +29,7 @@ public class PermqueueProducer extends DefaultProducer {
         LOGGER.debug("Adding exchange: {} to PermQueue: {}",
                 exchange.toString(), endpoint.getEndpointUri());
 
-        StopWatch addStopWatch = new Slf4JStopWatch("permqueue.ADD.call");
+        StopWatch addStopWatch = new Slf4JStopWatch("pqseda.ADD.call");
         addStopWatch.start();
         endpoint.getQueue().add(queuePayload);
         addStopWatch.stop();
